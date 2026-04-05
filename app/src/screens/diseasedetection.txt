@@ -1,0 +1,141 @@
+import { ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View, ToastAndroid } from 'react-native'
+import React, { useEffect, useRef, useState } from 'react'
+import { Camera, useCameraDevice, useCameraDevices, useCameraFormat, useCameraPermission } from 'react-native-vision-camera'
+import Config from 'react-native-config';
+
+
+const uploadImage = async (imageUri) => {
+  try {
+    const formData = new FormData();
+    formData.append('file', {
+      uri: imageUri,
+      name: 'image.jpg',
+      type: 'image/jpeg',
+    });
+
+    const response = await fetch(`${Config.MODEL_API_URL}/predict`, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to upload image');
+    }
+
+    if (Platform.OS === 'android') {
+      ToastAndroid.show('Image uploaded successfully', ToastAndroid.SHORT);
+      console.log(response)
+    }
+  } catch (error) {
+    if (Platform.OS === 'android') {
+      ToastAndroid.show(`Error: ${error.message}`, ToastAndroid.LONG);
+    }
+  }
+};
+
+
+const DiseaseDetection = () => {
+  const { hasPermission, requestPermission } = useCameraPermission();
+  const camera = useRef(null)
+  const [imageData, setImageData] = useState('')
+  const [cameraOn, setCameraOn] = useState(false)
+
+  useEffect(() => {
+    checkPermission();
+  }, []);
+
+  const checkPermission = async () => {
+    if (!hasPermission) {
+      await requestPermission();
+    }
+  };
+
+  const device = useCameraDevice('back')
+  const format = useCameraFormat(device, [
+    { videoResolution: 'max' },
+    { photoResolution: 'max' },
+    { fps: 60 }
+  ])
+
+  if (device == null) return <ActivityIndicator />
+
+  const tackPicture = async () => {
+    try {
+      if (camera != null) {
+        const photo = await camera.current.takePhoto({
+          qualityPrioritization: 'speed',
+          flash: 'off',
+          enableShutterSound: false
+        })
+        setImageData(photo.path)
+        setCameraOn(false)
+        console.log(photo.path)
+      }
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
+
+  const handleUpload = () => {
+    const imageUri = 'file://' + imageData;
+
+    uploadImage(imageUri);
+  };
+
+  return (
+    <View style={{ flex: 1 }}>
+      {cameraOn ? (
+        <View style={{ flex: 1 }}>
+          <Camera
+            ref={camera}
+            style={StyleSheet.absoluteFill}
+            format={format}
+            device={device}
+            isActive={true}
+            photo={true}
+          />
+          <TouchableOpacity style={styles.cameraButton} onPress={() => { tackPicture() }}></TouchableOpacity>
+        </View>
+      ) : (
+        <View>
+          {imageData !== '' && (<Image source={{ uri: 'file://' + imageData }} style={{ width: '90%', height: 200 }} />)}
+          <TouchableOpacity style={styles.onCameraButton} onPress={() => { setCameraOn(true) }}>
+            <Text>Tack a photo</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.onCameraButton} onPress={() => { handleUpload() }}>
+            <Text>upload</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+    </View>
+  )
+}
+
+export default DiseaseDetection
+
+const styles = StyleSheet.create({
+  cameraButton: {
+    position: 'absolute',
+    bottom: 50,
+    alignSelf: 'center',
+    width: 60,
+    height: 60,
+    borderRadius: 100,
+    backgroundColor: 'red',
+    borderWidth: 5,
+    borderColor: '#ffffff'
+  },
+  onCameraButton: {
+    alignSelf: 'center',
+    width: '90%',
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1
+  }
+});

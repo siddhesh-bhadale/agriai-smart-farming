@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+tensorflow = "==2.5"
+uvicorn = "*"
+python-multipart = "*"
+pillow = "*"
+tensorflow-serving-api = "==2.5.0"
+matplotlib = "*"
+numpy = "*"
+scikit-learn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

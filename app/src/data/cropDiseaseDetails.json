@@ -1,0 +1,42 @@
+[
+    {
+        "diseaseName":"Cercospora leaf spot (Gray leaf spot)",
+        "image":"https://plantvillage-production-new.s3.amazonaws.com/image/67256/file/default-ba2b798c7e45de94bc046992675d2031.jpg",
+        "symptoms":"Small necrotic spots with chlorotic halos on leaves which expand to rectangular lesions 1-6 cm in length and 2-4 mm wide; as the lesions mature they turn tan in color and finally gray; lesions have sharp, parallel edges and are opaque; disease can develop quickly causing complete blighting of leaves and plant death. 1. Brown Spots with yellow rings throughout the leaf during the growing period of the Cassava 2. Lesions that are 0.15-0.2 cm in diameter 3. Serious cases can lead to holes throughout the lesions on the leaf",
+        "cause":"Fungus",
+        "comments":"Disease emergence is favored in areas where a corn crop is followed by more corn with no rotastion; severity and incidence of disease is likely die to continuous corn culture with minimum tillage and the use of susceptible hybrids in in the midwestern corn belt of the USA; prolonged periods of foggy or cloudy weather can cause severe Cercopora epidemics.",
+        "management":"Plant corn hybrids with resistance to the disease; crop rotation and plowing debris into soil may reduce levels of inoculum in the soil but may not provide control in areas where the disease is prevalent; foliar fungicides may be economically viable for some high yeilding susceptible hybrids."
+    },
+    {
+        "diseaseName":"Common rust",
+        "image":"https://plantvillage-production-new.s3.amazonaws.com/image/67269/file/default-b4f4b0ac4f30410b2f0b7b0689c0e693.jpg",
+        "symptoms":"Oval or elongated cinnamon brown pustules on upper and lower surfaces of leaves; pustules rupture and release powdery red spores; pustules turn dark brown-black as they mature and release dark brown powdery spores; if infection is severe, pustules may appear on tassels and ears and leaves may begin to yellow; in partially resistant corn hybrids, symptoms appear as chlorotic or necrotic flecks on the leaves which release little or no spore.",
+        "cause":"Fungus",
+        "comments":"Disease is spread by wind-borne spores; some of the most popularly grown sweet corn varieties have little or no resistance to the disease.",
+        "management":"The most effective method of controlling the disease is to plant resistant hybrids; application of appropriate fungicides may provide some degree on control and reduce disease severity; fungicides are most effective when the amount of secondary inoculum is still low, generally when plants only have a few rust pustules per leaf."
+    },
+    {
+        "diseaseName":"Corn(maize) Healthy",
+        "image":"https://plantvillage-production-new.s3.amazonaws.com/image/2331/file/default-a0c3d683be93ea8c9ecf7dc74a87230c.jpg",
+        "symptoms":"Maize is a versatile crop that can grow in different varieties of soil, water, and climatic conditions. The crop has a wide range of tolerance to temperature conditions but grows well in warm regions where moisture is sufficient. The crop flourishes in regions with rainfall ranging from 1200mm to 2500mm but can adapt to regions receiving rainfall of up to 400 mm. The crop requires warm temperatures of between 15°C and 30 °C and thrives in a range of zones with altitudes ranging from 100 m to 2900 m ASL, depending on the variety. The crop is sensitive to moisture stress around tasseling time and during cob formation. Growth is favorable under a pH ranging from 5-8 with 5.5-7 being optimal because it is sensitive to salinity.",
+        "cause":"",
+        "comments":"",
+        "management":""
+    },
+    {
+        "diseaseName":"Bacterial spot",
+        "image":"https://plantvillage-production-new.s3.amazonaws.com/image/1006/file/default-fbc3427cc95a433a6a1ebe4d268e222f.jpg",
+        "symptoms":"Water soaked, angular gray lesions on the underside of the leaves which turn purple and necrotic in the center and cause a shot hole appearance if lesion center drops out; if lesions are present in high numbers on leaves they may become chlorotic and drop from tree; cankers develop on twigs either as raised blisters or as a dark area surrounding a bud that fails to open; in years of severe infection the entire fruit crop may be lost; lesions on fruit begin as small brown, water-soaked lesions which may exude gum",
+        "cause":"Bacterium",
+        "comments":"Periods of frequent rainfall during late bloom and early petal drop increase likelihood of fruit and leaf infection; infection is rare during hot, dry weather",
+        "management":"Avoid planting susceptible peach varieties in areas where disease is known; once disease is visible it can be difficult to control, protective copper applications in the Fall prior to leaf drop and/or application in early growing season may help prevent the disease; care should be taken as peach trees are very sensitive to copper"
+    },
+    {
+        "diseaseName":"Peach Healthy",
+        "image":"https://plantvillage-production-new.s3.amazonaws.com/image/3284/file/default-2c8b8ab85409da4b330d997b2649fea3.jpg",
+        "symptoms":"Basic requirements Peaches grow best in areas with warm summers and require a summer temperature between 20 and 30°C (68-86°F) for the fruit to mature. The trees also have a chilling requirement to break dormancy but fruit buds can be damaged by prolonged periods below -15°C (5°F) and as such, the majority of production takes place in countries which are relatively close to the equator. In addition, peach trees bloom early and can be damaged by late frosts. Trees grow best in well-draining sandy loams in areas that receive full sun but can will grow in a variety of soils as long as water does not sit on the surface after heavy rainfall. It can be beneficial to plant the trees on elevated land to allow cold air to drain away. Trees will grow optimally in soils with a pH of 6.5. Propagation Peach trees are propagated vegetatively to maintain the desirable genetic characteristic of the parent. Commercial trees are usually propagated by T-budding in the summer. T-budding involves joining a bud from a desired variety onto an appropriate rootstock. Buds can also be collected late in the summer for budding during dormancy. The budwood should be collected from healthy shoots of current season growth, leaves removed and the budwood kept moist until the union with the rootstock is made. The budwood is joined to the rootstock by inserting the bud stick into a T-shaped cut on the bark of the rootstock and allowing it to grow. The rest of the tree is pruned to force the growth of the new bud which has the desired characteristics. Planting Peach trees should be planted in full sun. Plant bare root trees in a pre-dug hole which is slightly wider than the root ball. Backfill the hole so that the tree is planted to its original planting depth ensuring that the bud union is above the soil line. It is usually possible to identify this from changes in the color of the bark. If planting multiple trees, space them at least 7.6 m (25 ft) apart. General care and maintenance Peaches should be pruned annually, including the year of planting and are best trained to an open center. When the tree is bearing fruit, it is important to thin the fruits to prevent the tree from over-bearing. Aim to have 1 fruit every 8 inches. This allows fruits to become larger and prevents the tree from reducing production the following year. Trees should be watered regularly during the growing season to aid with fruit development. During dry periods, water trees every 10 to 14 days. Apply water deeply and widely, to at least the width of the canopy. Trees will also benefit from the application of a nitrogen fertilizer in Spring.",
+        "cause":"",
+        "comments":"",
+        "management":""
+    }
+]
